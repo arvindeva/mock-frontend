@@ -41,12 +41,30 @@ const Home = () => {
 
   const fetchResult = async (title) => {
     setLoading(true);
-    try {
-      const response = await axios.get(`http://127.0.0.1:5000/${title}`);
-      console.log(response);
-      setAnalysis(response.data);
-    } catch (err) {
-      console.log(err);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    if (title === 'nutcracker') {
+      const response = {
+        title: 'Nutcracker',
+        tempo: 108,
+        key: 'C Major',
+      };
+      setAnalysis(response);
+    }
+    if (title === 'fishin') {
+      const response = {
+        title: 'Fishin',
+        tempo: 117,
+        key: 'D minor',
+      };
+      setAnalysis(response);
+    }
+    if (title === 'sweetwaltz') {
+      const response = {
+        title: 'Sweet Waltz',
+        tempo: 152,
+        key: 'D Major',
+      };
+      setAnalysis(response);
     }
     setLoading(false);
   };

@@ -62,7 +62,7 @@ const NavBar = () => {
           <Grid templateColumns="repeat(2, 1fr)" gap={8}>
             <Link href="/">
               <a>
-                <h1>Home</h1>
+                <h1>Analyzer</h1>
               </a>
             </Link>
             <Link href="/about">
