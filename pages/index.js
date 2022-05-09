@@ -27,9 +27,12 @@ const StyledHome = styled.div`
     ul {
       list-style: none;
       .sample-item {
-        color: blue;
-        cursor: pointer;
-        text-decoration: underline;
+        p {
+          display: inline-block;
+          color: blue;
+          cursor: pointer;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -103,13 +106,13 @@ const Home = () => {
                   className="sample-item"
                   onClick={() => fetchResult('sweetwaltz')}
                 >
-                  Sweet Waltz
+                  <p>Sweet Waltz</p>
                 </li>
                 <li
                   className="sample-item"
                   onClick={() => fetchResult('fishin')}
                 >
-                  Fishin
+                  <p>Fishin</p>
                 </li>
               </ul>
             </Box>
